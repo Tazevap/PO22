@@ -1,0 +1,41 @@
+﻿<Window x:Class="WpfApp58.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp58"
+        mc:Ignorable="d"
+        Title="Илюха даун" Height="450" Width="800" Icon="Resources/Rio.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70">
+            </RowDefinition>
+            <RowDefinition Height="*">
+            </RowDefinition>
+            <RowDefinition Height="30">
+            </RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="LightBlue" HorizontalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Image Source="Resources/Transit.png" Height="60"></Image>
+            </Grid>
+            <Grid Grid.Column="1">
+                <TextBlock FontWeight="Bold" FontSize="50" >Магазин</TextBlock>
+            </Grid>
+            <Grid Grid.Column="2">
+                <Button Name="BtnBack" Content="Назад" Width="150" Height="50" Click="BtnBack_Click"></Button>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Frame x:Name="MainFrame" ContentRendered="MainFrame_ContentRendered" NavigationUIVisibility="Hidden">
+            </Frame>
+        </Grid>
+        <Grid Grid.Row="2" Background="HotPink">
+        </Grid>
+    </Grid>
+</Window>
